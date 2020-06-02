@@ -6,6 +6,7 @@ import * as Actions from '../actions';
 import Header from './Header';
 import styles from './Main.module.scss';
 import DashboardTable from './DashboardTable';
+import DashboardBarChart from './DashboardBarChart';
 
 const Main = ({
   getData,
@@ -18,6 +19,7 @@ const Main = ({
     <React.Fragment>
       <Header />
       <Container className={styles.container}>
+        <DashboardBarChart />
         <DashboardTable />
       </Container>
     </React.Fragment>

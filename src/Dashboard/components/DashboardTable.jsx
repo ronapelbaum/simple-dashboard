@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Paper,
   TableContainer,
   Table,
   TableHead,
@@ -18,7 +19,7 @@ const DashboardTable = ({ data, loading }) => {
   }
   const colDef = Object.keys(data[0]).filter((d) => d !== "id");
   return (
-    <TableContainer>
+    <TableContainer component={Paper}>
       <Table size="small">
         <TableHead>
           <TableRow className={styles.headerRow}>
