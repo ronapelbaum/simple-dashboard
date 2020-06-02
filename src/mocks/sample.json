@@ -1,0 +1,222 @@
+{
+	"title": "Website Metrics",
+	"data": [
+		{
+			"timestamp": "2019-06-24 16:28:23",
+			"impressions": 33766,
+			"clicks": 179,
+			"cost": 25.68,
+			"conversions": 41
+		},
+		{
+			"timestamp": "2019-06-25 09:45:05",
+			"impressions": 87584,
+			"clicks": 265,
+			"cost": 13.45,
+			"conversions": 79
+		},
+		{
+			"timestamp": "2019-06-26 11:20:20",
+			"impressions": 149287,
+			"clicks": 545,
+			"cost": 300.5,
+			"conversions": 42
+		},
+		{
+			"timestamp": "2019-06-27 21:39:18",
+			"impressions": 139715,
+			"clicks": 183,
+			"cost": 130.2,
+			"conversions": 3
+		},
+		{
+			"timestamp": "2019-06-28 09:00:13",
+			"impressions": 16404,
+			"clicks": 1084,
+			"cost": 30,
+			"conversions": 50
+		},
+		{
+			"timestamp": "2019-06-29 13:40:53",
+			"impressions": 164399,
+			"clicks": 175,
+			"cost": 200.23,
+			"conversions": 7
+		},
+		{
+			"timestamp": "2019-06-30 03:27:37",
+			"impressions": 133920,
+			"clicks": 322,
+			"cost": 21.13,
+			"conversions": 39
+		},
+		{
+			"timestamp": "2019-07-01 01:42:26",
+			"impressions": 56716,
+			"clicks": 1117,
+			"cost": 10.67,
+			"conversions": 32
+		},
+		{
+			"timestamp": "2019-07-02 21:40:10",
+			"impressions": 161305,
+			"clicks": 571,
+			"cost": 35.25,
+			"conversions": 30
+		},
+		{
+			"timestamp": "2019-07-03 21:46:34",
+			"impressions": 16206,
+			"clicks": 76,
+			"cost": 5.88,
+			"conversions": 88
+		},
+		{
+			"timestamp": "2019-07-04 02:24:19",
+			"impressions": 190801,
+			"clicks": 1141,
+			"cost": 105.95,
+			"conversions": 1
+		},
+		{
+			"timestamp": "2019-07-05 17:32:18",
+			"impressions": 76413,
+			"clicks": 1225,
+			"cost": 3.7,
+			"conversions": 20
+		},
+		{
+			"timestamp": "2019-07-06 12:31:49",
+			"impressions": 107407,
+			"clicks": 191,
+			"cost": 16.22,
+			"conversions": 41
+		},
+		{
+			"timestamp": "2019-07-07 20:54:58",
+			"impressions": 185454,
+			"clicks": 117,
+			"cost": 18.03,
+			"conversions": 27
+		},
+		{
+			"timestamp": "2019-07-08 06:08:34",
+			"impressions": 21630,
+			"clicks": 257,
+			"cost": 0.43,
+			"conversions": 92
+		},
+		{
+			"timestamp": "2019-07-09 12:35:01",
+			"impressions": 42833,
+			"clicks": 648,
+			"cost": 76.85,
+			"conversions": 45
+		},
+		{
+			"timestamp": "2019-07-10 22:35:22",
+			"impressions": 37691,
+			"clicks": 266,
+			"cost": 9.99,
+			"conversions": 35
+		},
+		{
+			"timestamp": "2019-07-11 07:52:44",
+			"impressions": 20093,
+			"clicks": 1855,
+			"cost": 74.38,
+			"conversions": 11
+		},
+		{
+			"timestamp": "2019-07-12 06:52:48",
+			"impressions": 166476,
+			"clicks": 371,
+			"cost": 1.45,
+			"conversions": 50
+		},
+		{
+			"timestamp": "2019-07-13 15:02:55",
+			"impressions": 37675,
+			"clicks": 1185,
+			"cost": 0.98,
+			"conversions": 52
+		},
+		{
+			"timestamp": "2019-07-14 16:43:30",
+			"impressions": 198113,
+			"clicks": 1986,
+			"cost": 123.72,
+			"conversions": 56
+		},
+		{
+			"timestamp": "2019-07-15 14:48:17",
+			"impressions": 16570,
+			"clicks": 801,
+			"cost": 2.39,
+			"conversions": 79
+		},
+		{
+			"timestamp": "2019-07-16 06:31:01",
+			"impressions": 61555,
+			"clicks": 1765,
+			"cost": 10.98,
+			"conversions": 87
+		},
+		{
+			"timestamp": "2019-07-17 10:41:41",
+			"impressions": 107570,
+			"clicks": 1082,
+			"cost": 7.54,
+			"conversions": 64
+		},
+		{
+			"timestamp": "2019-07-18 05:03:13",
+			"impressions": 87734,
+			"clicks": 1039,
+			"cost": 15.34,
+			"conversions": 32
+		},
+		{
+			"timestamp": "2019-07-19 20:05:40",
+			"impressions": 196128,
+			"clicks": 1605,
+			"cost": 22.34,
+			"conversions": 64
+		},
+		{
+			"timestamp": "2019-07-20 08:57:43",
+			"impressions": 37245,
+			"clicks": 862,
+			"cost": 23.56,
+			"conversions": 38
+		},
+		{
+			"timestamp": "2019-07-21 14:28:43",
+			"impressions": 168863,
+			"clicks": 1787,
+			"cost": 170,
+			"conversions": 81
+		},
+		{
+			"timestamp": "2019-07-22 17:03:06",
+			"impressions": 146253,
+			"clicks": 1569,
+			"cost": 55,
+			"conversions": 12
+		},
+		{
+			"timestamp": "2019-07-23 11:55:40",
+			"impressions": 13463,
+			"clicks": 1464,
+			"cost": 30.25,
+			"conversions": 38
+		},
+		{
+			"timestamp": "2019-07-24 17:45:37",
+			"impressions": 183735,
+			"clicks": 202,
+			"cost": 205.19,
+			"conversions": 35
+		}
+	]
+}
