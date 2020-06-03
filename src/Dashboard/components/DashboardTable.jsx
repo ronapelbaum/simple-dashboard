@@ -19,7 +19,7 @@ const DashboardTable = ({ data, loading }) => {
   }
   const colDef = Object.keys(data[0]).filter((d) => d !== "id");
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} elevation="5">
       <Table size="small">
         <TableHead>
           <TableRow className={styles.headerRow}>

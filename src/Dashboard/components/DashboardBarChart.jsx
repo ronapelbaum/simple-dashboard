@@ -17,7 +17,7 @@ const DashboardBarChart = ({ barDef, data, loading}) => {
     return null;
   }
   return (
-    <Paper>
+    <Paper elevation="5">
       <Chart data={data}>
         <Title text={barDef.title} />
         <ArgumentAxis />
