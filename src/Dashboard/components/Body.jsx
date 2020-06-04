@@ -1,22 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Container, Grid, Paper } from '@material-ui/core';
-import { Skeleton } from '@material-ui/lab';
-import { DashboardBarChart, DashboardLineChart, DashboardSideBySideBar, DashboardTable } from '../../common';
+import { Container, Grid } from '@material-ui/core';
+import { DashboardBarChart, DashboardLineChart, DashboardSideBySideBar, DashboardTable, LoadingPaper } from '../../common';
 import { loadingModel, costPerClickModel, costPerClickConfig, conversionModel, conversionConfig, impressionsConfig, impressionsModel, dataModel, tableConfig } from '../model';
 import styles from './Body.module.scss';
-
-const LoadingPaper = ({ loading, children }) => loading ? (
-  <Paper elevation="5" style={{ padding: '20px' }}>
-    <Skeleton variant="text" height={50} width="40%" />
-    <Skeleton variant="rect" height={400} />
-  </Paper>
-  ) : (
-  <Paper elevation="5">
-    {children}
-  </Paper>
-  );
 
 const Body = ({
   lineChartData,
