@@ -10,7 +10,7 @@ export const loadingModel = (state) => localState(state).loading;
 export const impressionsModel = (state) => dataModel(state)
   .map(({ impressions, timestamp }) => ({
     impressions,
-    date: moment(timestamp).format('MMM DD YY'),
+    date: moment(timestamp).format('DD/MM'),
   }));
 
 export const impressionsBarDef = () => ({
@@ -22,7 +22,7 @@ export const impressionsBarDef = () => ({
 export const costPerClickModel = (state) => dataModel(state)
   .map((d) => ({
     costPerClick: d.cost / d.clicks,
-    date: moment(d.timestamp).format('MMM DD YY'),
+    date: new Date(d.timestamp) || moment(d.timestamp).format('MMM DD YY'),
   }));
 
 export const costPerClickConfig = () => ({

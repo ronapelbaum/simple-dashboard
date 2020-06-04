@@ -12,16 +12,16 @@ import DashboardLineChart from './DashboardLineChart';
 const Body = ({ lineChartData, lineChartConfig }) => (
   <Container className={styles.container}>
     <Grid container spacing={6}>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <DashboardBarChart />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <DashboardLineChart data={lineChartData} config={lineChartConfig} />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <DashboardSideBySideBar />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={8}>
         <DashboardTable />
       </Grid>
     </Grid>
