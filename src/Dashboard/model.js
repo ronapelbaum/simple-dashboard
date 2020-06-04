@@ -10,12 +10,24 @@ export const loadingModel = (state) => localState(state).loading;
 export const impressionsModel = (state) => dataModel(state)
   .map(({ impressions, timestamp }) => ({
     impressions,
-    date: moment(timestamp).format('MMM DD'),
+    date: moment(timestamp).format('MMM DD YY'),
   }));
 
 export const impressionsBarDef = () => ({
   title: "Website Impressions",
   valueField: 'impressions',
+  argumentField: 'date'
+});
+
+export const costPerClickModel = (state) => dataModel(state)
+  .map((d) => ({
+    costPerClick: d.cost / d.clicks,
+    date: moment(d.timestamp).format('MMM DD YY'),
+  }));
+
+export const costPerClickConfig = () => ({
+  title: "Cost per Click",
+  valueField: 'costPerClick',
   argumentField: 'date'
 });
 
@@ -35,9 +47,7 @@ export const conversionModel = (state) => {
         [cur.date]: tmp,
       };
     }, {});
-    console.log('rapelbaum - model conversionModel', data);
-    
-  return Object.keys(data).map(date => ({
+  return Object.keys(data).map((date) => ({
     date,
     ...data[date],
   }));
