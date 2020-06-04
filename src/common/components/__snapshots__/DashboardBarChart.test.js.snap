@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardBarChart.jsx suite renders correctly 1`] = `
+"<Component data={{...}}>
+  <Component text=\\"bar chart\\" />
+  <Component />
+  <Component />
+  <Component valueField=\\"value\\" argumentField=\\"key\\" barWidth={0.9} />
+  <AnimationBase easing={[Function: easeOutCubic]} duration={1000} />
+</Component>"
+`;
+
+exports[`DashboardBarChart.jsx suite renders correctly for empty 1`] = `""`;

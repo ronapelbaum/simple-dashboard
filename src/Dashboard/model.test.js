@@ -1,47 +1,47 @@
-import { displayedContactList } from "./model";
+import { impressionsModel, costPerClickModel } from "./model";
 
-describe("ContactList/model suite", () => {
-  describe("displayedContactList() suite", () => {
-    it("should return contactList from state", () => {
-      const contactList = [];
-      const stateMock = {
-        DashboardReducer: {
-          contactList,
-        },
-      };
-
-      expect(displayedContactList(stateMock)).toBe(contactList);
+describe("Dashboard/model suite", () => {
+  const data = [{
+    "timestamp": "2019-07-10 22:35:22",
+    "impressions": 37691,
+    "clicks": 266,
+    "cost": 9.99,
+    "conversions": 35
+  },
+  {
+    "timestamp": "2019-07-11 07:52:44",
+    "impressions": 20093,
+    "clicks": 1855,
+    "cost": 74.38,
+    "conversions": 11
+  },
+];
+  const stateMock = {
+    DashboardReducer: {
+      data,
+    },
+  };
+   describe("impressionsModel() suite", () => {
+    
+    it("should return impressionsModel with number of entries as data", () => {
+      const actual = impressionsModel(stateMock);
+      expect(actual.length).toBe(data.length);
     });
-    it("should return dummy loading array when in loading state", () => {
-      const stateMock = {
-        DashboardReducer: {
-          contactList: [],
-          loading: true,
-        },
-      };
-
-      const actual = displayedContactList(stateMock);
-
-      expect(actual.length).toBe(7);
-      actual.forEach((d) => expect(d.id).toBeDefined());
-      actual.forEach((d) => expect(d.loading).toBeTruthy());
+    it("should return impressionsModel with impression and date", () => {
+      const actual = impressionsModel(stateMock);
+      expect(actual[0].impressions).toBeDefined();
+      expect(actual[0].date).toBeDefined();
     });
-
-    it("should return contactList array filtered by name prefix", () => {
-      const contactList = [
-        { name: "Alice" },
-        { name: "Bob" },
-        { name: " alex" },
-      ];
-      const stateMock = {
-        DashboardReducer: {
-          contactList,
-          prefix: "a",
-        },
-      };
-      const actual = displayedContactList(stateMock);
-
-      expect(actual.length).toBe(2);
+  });
+   describe("costPerClickModel() suite", () => {
+    it("should return costPerClickModel with number of entries as data", () => {
+      const actual = costPerClickModel(stateMock);
+      expect(actual.length).toBe(data.length);
+    });
+    it("should return costPerClickModel with costPerClick and date", () => {
+      const actual = costPerClickModel(stateMock);
+      expect(actual[0].costPerClick).toEqual(data[0].cost / data[0].clicks);
+      expect(actual[0].date).toBeDefined();
     });
   });
 });
