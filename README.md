@@ -25,13 +25,13 @@
 - charts
   - added *d3-scale* in *DashboardLineChart.jsx*
   - added time aggregation in model for *DashboardSideBySideBar.jsx*
-- Testing
-  - unit testing for important BL is for the pure functions in *model.js*
-  - snapshot testing for rendering components should be done like for *DashboardBarChart.jsx*
-  - E2E sanity testing should be added, launching the while app in browser and verify that we have rendering. 
-- MISC
-  - use material-ui theme
-  - changed favicon
+#### Testing
+- unit testing for important BL is for the pure functions in *model.js*
+- snapshot testing for rendering components should be done like for *DashboardBarChart.jsx*
+- E2E sanity testing should be added, launching the while app in browser and verify that we have rendering. 
+#### MISC
+- use material-ui theme
+- changed favicon
 
 ===
 
