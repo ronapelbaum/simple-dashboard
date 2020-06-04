@@ -5,14 +5,11 @@ import {
   LineSeries,
   Title,
   ArgumentAxis,
-  
   ValueAxis,
 } from '@devexpress/dx-react-chart-material-ui';
 
 import { Animation, ArgumentScale,
 } from '@devexpress/dx-react-chart';
-import { connect } from 'react-redux';
-import { loadingModel, impressionsModel, impressionsBarDef } from '../model';
 import { scaleTime } from 'd3-scale';
 
 const DashboardLineChart = ({ config, data, loading}) => {
@@ -20,19 +17,17 @@ const DashboardLineChart = ({ config, data, loading}) => {
     return null;
   }
   return (
-    <Paper elevation="5">
-      <Chart data={data}>
-        <Title text={config.title} />
-        <ArgumentScale factory={scaleTime} />
-        <ArgumentAxis />
-        <ValueAxis />
-        <LineSeries
-          valueField={config.valueField}
-          argumentField={config.argumentField}
-        />
-        <Animation />
-      </Chart>
-    </Paper>
+    <Chart data={data}>
+      <Title text={config.title} />
+      <ArgumentScale factory={scaleTime} />
+      <ArgumentAxis />
+      <ValueAxis />
+      <LineSeries
+        valueField={config.valueField}
+        argumentField={config.argumentField}
+      />
+      <Animation />
+    </Chart>
   );
 };
 
