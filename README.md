@@ -1,4 +1,4 @@
-## Contact List ![Node.js CI](https://github.com/ronapelbaum/simple-contact-list/workflows/Node.js%20CI/badge.svg?branch=master)
+## Simple Dashboard
 
 ### What did I do?
 #### Infrastructure
@@ -6,15 +6,25 @@
 - use scss modules
 - use redux & react-redux
 - use redux-saga
-- use material-ui
+- use `@material-ui`
+- use `@devexpress/dx-react-chart`
 - add eslint
 - add enzyme & snapshot testing
 
 #### Components & Features
 - *App.jsx*: react bootstrap flow
 - *Main.jsx*: feature structure and init flow
-- *ContactList.jsx*: grid structure, loading state, use model.js for filtering
-- *ContactCard.jsx*: local state for `showMore`
+- *Header.jsx*:
+  - get header from state
+  - set document header
+- *Body.jsx*:
+  - grid structure
+  - use custom *LoadingPage.jsx* for loading state
+  - use model.js for "feeding" rendering components
+  - Note that all rendering components are stateless and data agnostic
+- charts
+  - added *d3-scale* in *DashboardLineChart.jsx*
+  - added time aggregation in model for *DashboardSideBySideBar.jsx*
 - MISC
   - use material-ui theme
   - changed favicon
