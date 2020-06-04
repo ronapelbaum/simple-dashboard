@@ -2,13 +2,10 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Container, Grid, Paper } from '@material-ui/core';
-import DashboardBarChart from './DashboardBarChart';
-import DashboardTable from './DashboardTable';
-import styles from './Body.module.scss';
-import DashboardSideBySideBar from './DashboardSideBySideBar';
-import { loadingModel, costPerClickModel, costPerClickConfig, conversionModel, conversionConfig, impressionsConfig, impressionsModel } from '../model';
-import DashboardLineChart from './DashboardLineChart';
 import { Skeleton } from '@material-ui/lab';
+import { DashboardBarChart, DashboardLineChart, DashboardSideBySideBar, DashboardTable } from '../../common';
+import { loadingModel, costPerClickModel, costPerClickConfig, conversionModel, conversionConfig, impressionsConfig, impressionsModel, dataModel, tableConfig } from '../model';
+import styles from './Body.module.scss';
 
 const LoadingPaper = ({ loading, children }) => loading ? (
   <Paper elevation="5" style={{ padding: '20px' }}>
@@ -28,6 +25,8 @@ const Body = ({
   sideBySideChartConfig,
   barChartData,
   barChartConfig,
+  tableData,
+  tableConfig,
   loading,
 }) => (
   <Container maxWidth="xl" className={styles.container}>
@@ -49,7 +48,7 @@ const Body = ({
       </Grid>
       <Grid item xs={8}>
         <LoadingPaper loading={loading}>
-          <DashboardTable />
+          <DashboardTable data={tableData} config={tableConfig} />
         </LoadingPaper>
       </Grid>
     </Grid>
@@ -64,6 +63,8 @@ const mapStateToProps = (state) => ({
   sideBySideChartConfig: conversionConfig(),
   barChartData: impressionsModel(state),
   barChartConfig: impressionsConfig(),
+  tableData: dataModel(state),
+  tableConfig: tableConfig(),
 });
 
 export default connect(mapStateToProps)(Body);
