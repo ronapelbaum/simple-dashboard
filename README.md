@@ -18,7 +18,7 @@
   - get header from state
   - set document header
 - *Body.jsx*:
-  - grid structure
+  - responsive grid structure
   - use custom *LoadingPage.jsx* for loading state
   - use model.js for "feeding" rendering components
   - Note that all rendering components are stateless and data agnostic
