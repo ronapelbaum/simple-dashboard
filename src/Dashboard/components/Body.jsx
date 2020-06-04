@@ -8,6 +8,18 @@ import styles from './Body.module.scss';
 import DashboardSideBySideBar from './DashboardSideBySideBar';
 import { loadingModel, costPerClickModel, costPerClickConfig, conversionModel, conversionConfig, impressionsConfig, impressionsModel } from '../model';
 import DashboardLineChart from './DashboardLineChart';
+import { Skeleton } from '@material-ui/lab';
+
+const LoadingPaper = ({ loading, children }) => loading ? (
+  <Paper elevation="5" style={{ padding: '20px' }}>
+    <Skeleton variant="text" height={50} width="40%" />
+    <Skeleton variant="rect" height={400} />
+  </Paper>
+  ) : (
+  <Paper elevation="5">
+    {children}
+  </Paper>
+  );
 
 const Body = ({
   lineChartData,
@@ -21,24 +33,24 @@ const Body = ({
   <Container maxWidth="xl" className={styles.container}>
     <Grid container spacing={6}>
       <Grid item lg={6} sm={12}>
-        <Paper elevation="5">
+        <LoadingPaper loading={loading}>
           <DashboardBarChart data={barChartData} config={barChartConfig} />
-        </Paper>
+        </LoadingPaper>
       </Grid>
       <Grid item lg={6} sm={12}>
-        <Paper elevation="5">
+        <LoadingPaper loading={loading}>
           <DashboardLineChart data={lineChartData} config={lineChartConfig} />
-        </Paper>
+        </LoadingPaper>
       </Grid>
       <Grid item xs={4}>
-        <Paper elevation="5">
+        <LoadingPaper loading={loading}>
           <DashboardSideBySideBar data={sideBySideChartData} config={sideBySideChartConfig} />
-        </Paper>
+        </LoadingPaper>
       </Grid>
       <Grid item xs={8}>
-        <Paper elevation="5">
+        <LoadingPaper loading={loading}>
           <DashboardTable />
-        </Paper>
+        </LoadingPaper>
       </Grid>
     </Grid>
   </Container>
